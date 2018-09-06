@@ -1,11 +1,18 @@
 class Account():
-    def get_balance():
-        print(f'\t    DEFAULT ACCOUNT: get balance')
-        print(f'\t    - Wave magic wand to get balance')
-        return '$80'
-
+    def __init__(self):
+        print(f'\t\t... creating new account')
+        self.balance = 0
 
 class Teller():
-    def withdraw(amount):
-        print(f'\t    DEFAULT TELLER: withdraw {amount}')
-        print(f'\t    - Waves magic want to withdraw {amount})')
+    def deposit(amount, account):
+        print(f'\t\t... depositing {amount}')
+        account.balance += amount
+
+    def withdraw(amount, account):
+        print(f'\t\t... withdrawing {amount}')
+        account.balance -= amount
+
+    def get_balance(account):
+        print(f'\t\t... getting balance')
+        return account.balance
+
