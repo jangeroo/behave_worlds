@@ -1,4 +1,3 @@
-@mj
 Feature: Cash withdrawal
 
   Scenario: Successful withdrawal from an account in credit
